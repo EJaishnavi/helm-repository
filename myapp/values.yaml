@@ -1,0 +1,20 @@
+replicaCount: 2
+
+image:
+  repository: jaishnavi08/gameimage    
+  tag: v1
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort            
+  port: 80                  
+  nodePort: 30080          
+
+containerPort: 80          
+
+resources: {}              
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
+
