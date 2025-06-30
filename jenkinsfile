@@ -23,5 +23,19 @@ pipeline {
         '''
       }
     }
+stage('Verify Deployment') {
+      steps {
+        sh '''
+          echo "Checking resources in namespace: $NAMESPACE"
+          kubectl get pods -n $NAMESPACE
+          kubectl get svc -n $NAMESPACE
+        '''
+      }
+    }
+  }
+post {
+    always {
+      echo 'Post-build actions complete.'
+    }
   }
 }
