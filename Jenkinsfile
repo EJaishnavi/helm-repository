@@ -9,11 +9,12 @@ pipeline {
   }
 
   stages {
-    stage('Checkout') {
-      steps {
-        git 'https://github.com/EJaishnavi/helm-repository.git'
-      }
-    }
+    stage('Checkout Code') {
+  steps {
+    git branch: 'main',
+        url: 'https://github.com/EJaishnavi/helm-repository.git'
+  }
+}
 
     stage('Helm Install') {
       steps {
