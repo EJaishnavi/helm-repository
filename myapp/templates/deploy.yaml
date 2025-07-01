@@ -13,7 +13,7 @@ spec:
         app: web-app
     spec:
       containers:
-        - image: jaishnavi08/gameimage
+        - image: jaishnavi08/gameimage:v1
           name: cont-1
           ports:
             - containerPort: 80
