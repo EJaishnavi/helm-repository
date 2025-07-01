@@ -1,8 +1,9 @@
 pipeline {
   agent any
 
-  environment {
-    KUBECONFIG = '/var/lib/jenkins/minikube-config'  // Update as per your EC2 path
+ environment {
+  KUBECONFIG = '/var/lib/jenkins/.kube/config'
+ // Update as per your EC2 path
     RELEASE_NAME = 'myapp'
     CHART_PATH = 'myapp'
     NAMESPACE = 'dev'
